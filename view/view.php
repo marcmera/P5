@@ -23,6 +23,9 @@ $activeButton = isset($_POST['boton']) ? $_POST['boton'] : '';
 <body class="bg-gray-100">
 
     <div class="container mx-auto p-4">
+        <?php
+        greetPlayer("Marc", "Tom Clancy's Rainbow Six Siege");
+        ?>
         <h1 class="text-8xl font-bold p-16 text-center">Videojuegos</h1>
 
         <!-- Formulario para ordenar los juegos -->
@@ -35,6 +38,8 @@ $activeButton = isset($_POST['boton']) ? $_POST['boton'] : '';
                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded <?php echo ($activeButton === 'genre') ? 'bg-blue-700' : 'bg-blue-500'; ?>">Género</button>
             <button type="submit" name="boton" value="title"
                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded <?php echo ($activeButton === 'title') ? 'bg-blue-700' : 'bg-blue-500'; ?>">Título</button>
+            <button type="submit" name="boton" value="clear"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded <?php echo ($activeButton === 'clear') ? 'bg-blue-700' : 'bg-blue-500'; ?>">Clear</button>
         </form>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

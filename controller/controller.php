@@ -39,6 +39,11 @@
             return;
         }
 
+        // Ordena los juegos por orden de inserción si el género es "clear"
+        if ($genre === 'clear') {
+            return;
+        }
+
         foreach ($games as &$game) {
             // Asegúrate de que la clave proporcionada exista en cada juego
             if (!isset($game[$genre])) {
